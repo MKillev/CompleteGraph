@@ -1,0 +1,51 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:c="http://research.microsoft.com/DynamicDataDisplay/1.0"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="CombinedGraph.MainWindow"
+        Title="MainWindow"  Loaded="Window_Loaded"  WindowStartupLocation="CenterScreen" WindowState="Maximized" d:DesignWidth="1954.05" d:DesignHeight="962.838" >
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="1050"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <c:ChartPlotter x:Name="plotter" VerticalAlignment="Top" Height="320" HorizontalAlignment="Center" Grid.Row="1" Grid.RowSpan="4" Grid.Column="1"/>
+        <Image x:Name="Waterfall" Height="512"   VerticalAlignment="Center" HorizontalAlignment="Center" Width="1024" Grid.Column="1" Grid.Row="4" Grid.RowSpan="6"/>
+        <Button x:Name="GeneralStart" Content="ReadDataBase" Width="100" Click="GeneralStart_Click" VerticalAlignment="Center" Grid.Column="0" Grid.Row="2" HorizontalAlignment="Center"/>
+        <Button x:Name="ReadSocket" Content="ReadSocket" Width="100" ClickMode="Press" Click="ReadSocket_Click"  Grid.Row="3" HorizontalAlignment="Center" Height="20" VerticalAlignment="Center"/>
+        <TextBox x:Name="MaxValue" Width="100" Height="20" TextChanged="MaxValue_TextChanged" Grid.Column="0" VerticalAlignment="Center" Grid.Row="0" HorizontalAlignment="Center" />
+        <TextBox  x:Name="MinValue"  Width="100" Height="20" TextChanged="MinValue_TextChanged" Grid.Column="0" VerticalAlignment="Center" Grid.Row="1" HorizontalAlignment="Center" />
+        <Label x:Name="Maximum" Content="Maximum frequency" Grid.Column="0" VerticalAlignment="Top" Grid.Row="0" HorizontalAlignment="Center" Width="151"/>
+        <Label x:Name="Minimum" Visibility="Visible"  Content="Minimum frequency" Grid.Column="0" VerticalAlignment="Top" Grid.Row="1" HorizontalAlignment="Center" Width="133"/>
+        <Button x:Name="STOP"  Content="STOP" ClickMode="Press" Click="STOP_Click" Grid.Row="4" Width="100" Height="20" VerticalAlignment="Center" IsCancel="True" HorizontalAlignment="Center"/>
+        <TextBox Name="Server" Grid.Column="0" TextChanged="Server_TextChanged" Grid.Row="5" HorizontalAlignment="Right" Width="100" Height="18" VerticalAlignment="Center"/>
+        <TextBox Name="User" Grid.Column="0" TextChanged="User_TextChanged" Grid.Row="7" HorizontalAlignment="Right" Width="100" Height="18" VerticalAlignment="Center"/>
+        <TextBox Name="Name" Grid.Column="0" VerticalAlignment="Center" TextChanged="Name_OnTextChanged" Grid.Row="6" HorizontalAlignment="Right" Width="100" />
+        <Label Name="UserNme" Content="Username" Grid.Column="0" VerticalAlignment="Top" Grid.Row="7" HorizontalAlignment="Right"/>
+        <Label Name="Sevrer_Address" Content="Server_Address" Grid.Column="0" Grid.Row="5" HorizontalAlignment="Right"  VerticalAlignment="Top"/>
+        <Label Name="NameDatabase" Content="NameDatabase" Grid.Column="0" Grid.Row="6" HorizontalAlignment="Right" VerticalAlignment="Top"/>
+        <Label Name="Pass" Content="Password" Grid.Column="0" Grid.Row="8" HorizontalAlignment="Right"  VerticalAlignment="Top"/>
+        <TextBox Name="Password" Grid.Column="0" VerticalAlignment="Center" TextChanged="Password_TextChanged" Grid.Row="8" HorizontalAlignment="Right" Width="100" />
+        <Button x:Name="Connect"  Content="Connect" ClickMode="Press" Click="Connect_OnClick" Grid.Row="9" Grid.Column="0" Width="100" Height="20" VerticalAlignment="Center" HorizontalAlignment="Right"/>
+        <TextBox Name="Address" Grid.Column="0" TextChanged="Address_OnTextChanged" Grid.Row="5" HorizontalAlignment="Left" Width="100" Height="18" VerticalAlignment="Center"/>
+        <TextBox Name="Dns" Grid.Column="0" TextChanged="Dns_OnTextChanged" Grid.Row="7" HorizontalAlignment="Left" Width="100" Height="18" VerticalAlignment="Center"/>
+        <TextBox Name="Port" Grid.Column="0" VerticalAlignment="Center" TextChanged="Port_TextChanged" Grid.Row="6" HorizontalAlignment="Left" Width="100" />
+        <Label Name="DNS" Content="DNS" Grid.Column="0" VerticalAlignment="Top" Grid.Row="7" HorizontalAlignment="Left"/>
+        <Label Name="Adress" Content="Server_Address" Grid.Column="0" Grid.Row="5" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Label Name="PORT" Content="PORT" Grid.Column="0" Grid.Row="6" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+       
+     </Grid>
+</Window>
